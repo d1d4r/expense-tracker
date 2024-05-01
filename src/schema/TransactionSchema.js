@@ -1,12 +1,10 @@
 import { z } from "zod";
 
+const typeTransaction = ['EXPENSE','INCOME']
 export const transactionSchema = z.object({
-
-  type: z.string(),
-  amount: z.number(),
-  description: z.string().max(200, {
-    message: "description lenght must be less than 200",
-  }),
+  type: z.enum(typeTransaction),
+  amount: z.coerce.number(),
+  description: z.string().optional(),
   categoryId: z.number(),
   userId: z.number(),
 });
