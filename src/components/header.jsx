@@ -20,7 +20,7 @@ import {
 
 export default function Header() {
   return (
-    <header className="sticky top-0 flex items-center h-16 gap-4 px-4 border-b bg-background md:px-6">
+    <header className="flex items-center h-16 gap-4 px-4 border-b  bg-background md:px-6">
       <nav className="flex-col hidden gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
         <Link
           className="flex items-center gap-2 text-lg font-semibold md:text-base"
@@ -37,7 +37,7 @@ export default function Header() {
         </Link>
         <Link
           className="transition-colors text-muted-foreground hover:text-foreground"
-          href="#"
+          href="/transactions"
         >
           Transactions
         </Link>
@@ -46,12 +46,6 @@ export default function Header() {
           href="#"
         >
           Category
-        </Link>
-        <Link
-          className="transition-colors text-muted-foreground hover:text-foreground"
-          href="#"
-        >
-          Customers
         </Link>
         <Link
           className="transition-colors text-muted-foreground hover:text-foreground"
@@ -83,19 +77,13 @@ export default function Header() {
               className="text-muted-foreground hover:text-foreground"
               href="#"
             >
-              Orders
+              Transactions
             </Link>
             <Link
               className="text-muted-foreground hover:text-foreground"
               href="#"
             >
-              Products
-            </Link>
-            <Link
-              className="text-muted-foreground hover:text-foreground"
-              href="#"
-            >
-              Customers
+              Category
             </Link>
             <Link
               className="text-muted-foreground hover:text-foreground"
