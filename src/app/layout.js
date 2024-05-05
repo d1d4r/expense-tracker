@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import Header from "@/components/header";
 import { Toaster } from "@/components/ui/toaster";
 import NextTopLoader from "nextjs-toploader";
+import Provider from "@/providers/provider";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -16,18 +17,22 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={cn(
-          "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable
-        )}
+   
+      <html lang="en">
+        <body
+          className={cn(
+            "min-h-screen bg-background font-sans antialiased",
+            fontSans.variable
+          )}
       >
-        <NextTopLoader />
-        <Header />
-        {children}
-        <Toaster />
-      </body>
-    </html>
+        <Provider>
+          <NextTopLoader />
+          <Header />
+           {children}
+          <Toaster />
+        </Provider>
+        </body>
+      </html>
+    
   );
 }
