@@ -1,31 +1,11 @@
-import { columns } from "@/components/Tabel/columns";
-import { DataTable } from "@/components/Tabel/dataTabel";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import prisma from "@/lib/db/prisma";
 import { PlusCircle, SearchIcon } from "lucide-react";
 import Link from "next/link";
-import React from "react";
+import React, { Suspense } from "react";
+import TransactionTabel from "./_component/TransactionTabel";
 
-const getTransactions = async () => {
-  try {
-    const data = await prisma.transaction.findMany({
-      orderBy: [{ createdAt: "desc" }],
-    });
-
-    return { transactions: data };
-  } catch (error) {
-    return { error: error };
-  }
-};
-
-export default async function TransactionsPage() {
-  const { transactions, error } = await getTransactions();
-
-  if (!transactions) {
-    throw new Error(JSON.parse(error));
-  }
-
+export default function TransactionsPage() {
   return (
     <div className="container py-10 mx-auto space-y-4">
       <p className="text-4xl text-primary">Transactions</p>
@@ -46,10 +26,9 @@ export default async function TransactionsPage() {
           </Link>
         </Button>
       </div>
-      <DataTable
-        columns={columns}
-        data={JSON.parse(JSON.stringify(transactions))}
-      />
+      <Suspense  fallback={<p>Loading feed...</p>}>
+        <TransactionTabel />
+      </Suspense>
     </div>
   );
 }
