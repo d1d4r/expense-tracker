@@ -82,12 +82,8 @@ export default function CategoryForm() {
 export const SubmitButton = () => {
   const { pending } = useFormStatus();
   return (
-    <DialogFooter className="sm:justify-start">
-      <DialogClose asChild>
-        <Button type="submit" disabled={pending}>
-          {pending ? "Submit..." : "Submit"}
-        </Button>
-      </DialogClose>
-    </DialogFooter>
+    <Button type="submit" disabled={pending}>
+      {pending ? "Submit..." : "Submit"}
+    </Button>
   );
 };
