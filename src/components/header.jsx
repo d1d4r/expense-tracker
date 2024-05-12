@@ -20,7 +20,7 @@ import {
 
 export default function Header() {
   return (
-    <header className="flex items-center h-16 gap-4 px-4 border-b  bg-background md:px-6">
+    <header className="flex items-center h-16 gap-4 px-4 border-b bg-background md:px-6">
       <nav className="flex-col hidden gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
         <Link
           className="flex items-center gap-2 text-lg font-semibold md:text-base"
@@ -31,7 +31,7 @@ export default function Header() {
         </Link>
         <Link
           className="transition-colors text-foreground hover:text-foreground"
-          href="#"
+          href="/"
         >
           Dashboard
         </Link>
@@ -43,13 +43,13 @@ export default function Header() {
         </Link>
         <Link
           className="transition-colors text-muted-foreground hover:text-foreground"
-          href="#"
+          href="/categories"
         >
           Category
         </Link>
         <Link
           className="transition-colors text-muted-foreground hover:text-foreground"
-          href="#"
+          href="/analytics"
         >
           Analytics
         </Link>
@@ -70,7 +70,7 @@ export default function Header() {
               <Package2Icon className="w-6 h-6" />
               <span className="sr-only">Acme Inc</span>
             </Link>
-            <Link className="hover:text-foreground" href="#">
+            <Link className="hover:text-foreground" href="/">
               Dashboard
             </Link>
             <Link
@@ -81,13 +81,13 @@ export default function Header() {
             </Link>
             <Link
               className="text-muted-foreground hover:text-foreground"
-              href="#"
+              href="/categories"
             >
               Category
             </Link>
             <Link
               className="text-muted-foreground hover:text-foreground"
-              href="#"
+              href="analytics"
             >
               Analytics
             </Link>

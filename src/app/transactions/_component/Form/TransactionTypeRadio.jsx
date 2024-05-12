@@ -7,8 +7,13 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { RadioGroup, RadioGroupItem } from "../../../components/ui/radio-group";
+import {
+  RadioGroup,
+  RadioGroupItem,
+} from "../../../../components/ui/radio-group";
+import { useRadioContext } from "@/context/RadioProvider";
 export default function TransactionTypeRadio({ form }) {
+  const { setRadioValue } = useRadioContext();
   return (
     <FormField
       control={form.control}
@@ -18,7 +23,11 @@ export default function TransactionTypeRadio({ form }) {
           <FormLabel>Transaction Type</FormLabel>
           <FormControl>
             <RadioGroup
-              onValueChange={field.onChange}
+              onValueChange={(value) => {
+                field.onChange;
+                setRadioValue(value);
+                form.setValue("categoryId", null);
+              }}
               defaultValue={field.value}
               className="flex space-y-1"
             >
@@ -46,4 +55,3 @@ export default function TransactionTypeRadio({ form }) {
     />
   );
 }
-//rgb(16 185 129 / 0.1)

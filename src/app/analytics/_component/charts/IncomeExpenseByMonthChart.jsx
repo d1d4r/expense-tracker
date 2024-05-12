@@ -17,16 +17,18 @@ console.error = (...args) => {
   error(...args);
 };
 
-export default function AverageTransactionAmountByCategoryChart({ data }) {
+
+export default function IncomeExpenseByMonthChart({ data }) {
   return (
     <ResponsiveContainer width="100%" height={350}>
       <BarChart data={data}>
         <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="category" />
+        <XAxis dataKey="month" />
         <YAxis />
         <Tooltip />
         <Legend />
-        <Bar dataKey="average_amount" fill="#8884d8" />
+        <Bar dataKey="total_income" fill="#10B980" />
+        <Bar dataKey="total_expense" fill="#EF4444" />
       </BarChart>
     </ResponsiveContainer>
   );

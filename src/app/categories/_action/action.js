@@ -5,20 +5,23 @@ import { categorySchema } from "@/schema/categorySchema";
 import { revalidatePath } from "next/cache";
 
 export const createCategory = async (data) => {
-  const parse = categorySchema.safeParse(data);
+  try {
+    const parse = categorySchema.safeParse(data);
 
-  if (!parse.success) {
-    return { success: false, message: "fail adding" };
+    if (!parse.success) {
+      return { success: false, message: "fail adding" };
+    }
+
+    await prisma.category.create({
+      data,
+    });
+
+    revalidatePath("/categories");
+
+    return { success: true, message: "category added" };
+  } catch (error) {
+    return { success: false, message: error.message };
   }
-
-  await prisma.category.create({
-    data,
-  });
-
-  revalidatePath("/categories");
-
-  return { success: true, message: "category added" };
-
 };
 
 export const deleteCategory = async (id) => {

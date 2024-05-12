@@ -43,7 +43,7 @@ export const columns = [
   },
 
   {
-    accessorKey: "categoryId",
+    accessorKey: "Category.name",
     header: "Category",
   },
   {

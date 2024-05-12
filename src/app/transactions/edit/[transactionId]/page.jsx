@@ -1,8 +1,7 @@
 import prisma from "@/lib/db/prisma";
 import { notFound } from "next/navigation";
 import React from "react";
-import TransactionForm from "../../_component/TransactionForm";
-import Form from "@/components/common/Form";
+import Form from "@/app/transactions/_component/Form/Form";
 
 const getTransaction = async (id) => {
   try {
@@ -25,12 +24,9 @@ export default async function EditTransactionPage({ params }) {
   }
 
   return (
-    <div>
-      <Form
-        transaction={JSON.parse(JSON.stringify(transaction))}
-        transactionId={transactionId}
-      />
-      {/* <TransactionForm transaction={transaction} /> */}
-    </div>
+    <Form
+      transaction={JSON.parse(JSON.stringify(transaction))}
+      transactionId={transactionId}
+    />
   );
 }

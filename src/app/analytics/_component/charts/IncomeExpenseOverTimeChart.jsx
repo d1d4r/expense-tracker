@@ -29,8 +29,8 @@ export default function IncomeExpenseOverTimeChart({ data }) {
         <YAxis />
         <Tooltip />
         <Legend />
-        <Line type="monotone" dataKey="total_expense" stroke="#8884d8" />
-        <Line type="monotone" dataKey="total_income" stroke="#82ca9d" />
+        <Line type="monotone" dataKey="total_expense" stroke="#EF4444" />
+        <Line type="monotone" dataKey="total_income" stroke="#10B980" />
       </LineChart>
     </ResponsiveContainer>
   );

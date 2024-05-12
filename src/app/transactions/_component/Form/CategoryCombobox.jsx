@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/command";
 import {
   FormControl,
+  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -24,17 +25,37 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { useState } from "react";
+import { useQuery } from "@tanstack/react-query";
+import { getCategories } from "@/lib/axios/categoriesApi";
+import { useFormContext } from "react-hook-form";
+import { useRadioContext } from "@/context/RadioProvider";
 
-export function CategoryCombobox({ form, categories }) {
+export function CategoryCombobox({ form }) {
   const [open, setOpen] = useState(false);
+  const { radioValue } = useRadioContext();
 
+  const {
+    data: categories,
+    isError,
+    isLoading,
+  } = useQuery({
+    queryKey: ["categoryies", radioValue],
+    queryFn: () => getCategories(radioValue),
+  });
+
+  if (isLoading) {
+    return <p>loading...</p>;
+  }
+  if (isError) {
+    return <p>fail</p>;
+  }
   return (
     <FormField
-      // control={form.control}
+      control={form.control}
       name="categoryId"
       render={({ field }) => (
         <FormItem className="flex flex-col">
-          <FormLabel>Category Id</FormLabel>
+          <FormLabel>Category</FormLabel>
           <Popover open={open} onOpenChange={setOpen}>
             <PopoverTrigger asChild>
               <FormControl>
@@ -47,7 +68,7 @@ export function CategoryCombobox({ form, categories }) {
                   )}
                 >
                   {field.value
-                    ? categories.find(
+                    ? categories?.find(
                         (category) => category.value === field.value
                       )?.label
                     : "Select category"}
@@ -60,7 +81,7 @@ export function CategoryCombobox({ form, categories }) {
                 <CommandInput placeholder="Search category..." />
                 <CommandEmpty>No category found.</CommandEmpty>
                 <CommandGroup>
-                  {categories.map((category) => (
+                  {categories?.map((category) => (
                     <CommandItem
                       value={category.label}
                       key={category.value}
@@ -84,7 +105,7 @@ export function CategoryCombobox({ form, categories }) {
               </Command>
             </PopoverContent>
           </Popover>
-          {/* <FormDescription>pick a Category</FormDescription> */}
+          <FormDescription>pick a Category</FormDescription>
           <FormMessage />
         </FormItem>
       )}

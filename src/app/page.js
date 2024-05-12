@@ -1,28 +1,32 @@
-import prisma from "@/lib/db/prisma";
-const getAlluser = async () => {
-  try {
-    const allUsers = await prisma.user.findMany();
-    return { allUsers };
-  } catch (error) {
-    return { error: true };
-  }
-};
-export default async function Home() {
-  const { allUsers, error } = await getAlluser();
+import { Suspense } from "react";
+import CardSekeleton from "@/components/common/cardSummery/CardSekeleton";
+import TotalIncomeCard from "@/components/common/cardSummery/TotalIncomeCard";
+import TotalExpenseCard from "@/components/common/cardSummery/TotalExpenseCard";
+import NetIncomeCard from "@/components/common/cardSummery/NetIncomeCard";
+import RecentTransactionTabel from "./transactions/_component/tabel/RecentTransactionTabel";
+import CacheTabel from "./transactions/_component/tabel/CacheTabel";
+import RecentCategoryTabel from "./categories/_component/tabel/RecentCategoryTabel";
 
-  // if (error) {
-  //   return <p className="bg-primary text-red-700">{JSON.stringify(error)}</p>;
-  // }
+export default function Home() {
   return (
-    <main>
-      {allUsers.map((user) => {
-        return (
-          <div key={user.id} className="text-white bg-black border">
-            <p>{user.email}</p>
-            <p>{user.username}</p>
-          </div>
-        );
-      })}
+    <main className="container space-y-5 ">
+      <div className="grid gap-4 mt-3 md:grid-cols-2 md:gap-8 lg:grid-cols-4">
+        <Suspense fallback={<CardSekeleton />}>
+          <TotalIncomeCard />
+        </Suspense>
+
+        <Suspense fallback={<CardSekeleton />}>
+          <TotalExpenseCard />
+        </Suspense>
+
+        <Suspense fallback={<CardSekeleton />}>
+          <NetIncomeCard />
+        </Suspense>
+      </div>
+      <div className="grid grid-cols-2 grid-rows-1 gap-4 ">
+        <RecentTransactionTabel />
+        <RecentCategoryTabel />
+      </div>
     </main>
   );
 }

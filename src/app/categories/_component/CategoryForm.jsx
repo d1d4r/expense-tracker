@@ -1,5 +1,4 @@
 "use client";
-import TransactionTypeRadio from "@/app/transactions/_component/TransactionTypeRadio";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -19,6 +18,8 @@ import { useFormStatus, useFormState } from "react-dom";
 import { useToast } from "@/components/ui/use-toast";
 import { createCategory } from "../_action/action";
 import { useRouter } from "next/navigation";
+import CategoryTypeRadio from "./CategoryTypeRadio";
+import { DialogClose, DialogFooter } from "@/components/ui/dialog";
 
 export default function CategoryForm() {
   const form = useForm({
@@ -35,7 +36,6 @@ export default function CategoryForm() {
   );
 
   const { toast } = useToast();
-  const router = useRouter();
 
   async function processForm(data) {
     const result = await createCategory(data);
@@ -45,23 +45,19 @@ export default function CategoryForm() {
         variant: "destructive",
         title: result.message,
       });
+    } else {
+      toast({
+        variant: "success",
+        title: result.message,
+      });
     }
-
-    toast({
-      variant: "success",
-      title: result.message,
-    });
-    router.push("/categories");
   }
 
   return (
     <Form {...form}>
-      <div className="flex items-center justify-center min-h-screen">
-        <form
-          action={formAction}
-          className="w-fit p-5 rounded-md m-auto space-y-8 border"
-        >
-          <TransactionTypeRadio form={form} />
+      <div>
+        <form action={formAction} className="p-5 m-auto space-y-8 w-fit">
+          <CategoryTypeRadio form={form} />
           <FormField
             control={form.control}
             name="name"
@@ -86,8 +82,12 @@ export default function CategoryForm() {
 export const SubmitButton = () => {
   const { pending } = useFormStatus();
   return (
-    <Button type="submit" disabled={pending}>
-      {pending ? "Submit..." : "Submit"}
-    </Button>
+    <DialogFooter className="sm:justify-start">
+      <DialogClose asChild>
+        <Button type="submit" disabled={pending}>
+          {pending ? "Submit..." : "Submit"}
+        </Button>
+      </DialogClose>
+    </DialogFooter>
   );
 };

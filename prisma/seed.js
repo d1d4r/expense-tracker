@@ -28,7 +28,7 @@ const seeder = async () => {
     } catch (error) {
       if (error.code === "P2002") {
         console.log(
-          `💥 Category with name "${categories[index]}" already exists.`
+          `💥 Category with name "${categoriesarr[index]}" already exists.`
         );
       } else {
         throw error;
@@ -79,11 +79,3 @@ const seeder = async () => {
 };
 
 seeder();
-
-// await prisma.$executeRaw`TRUNCATE TABLE categories`
-// await prisma.$executeRaw`TRUNCATE TABLE transactions`
-// await prisma.$executeRaw`TRUNCATE TABLE users`
-
-// await prisma.$executeRaw`ALTER TABLE categories AUTO_INCREMENT = 1`
-// await prisma.$executeRaw`ALTER TABLE transactions AUTO_INCREMENT = 1`
-// await prisma.$executeRaw`ALTER TABLE users AUTO_INCREMENT = 1`
