@@ -34,14 +34,13 @@ export default async function IncomeExpenseOverTime() {
   await new Promise((resolve) => {
     setTimeout(() => {
       resolve();
-    }, 3000);
+    }, 1000);
   });
   const { data, error } = await GetTotalIncomeExpenseOverTime();
 
   if (!data) {
     return <p>{error}</p>;
   }
-  // console.log("🚀 ~ IncomeExpenseOverTime ~ data:", data);
 
   return (
     <Card className="rounded-none">

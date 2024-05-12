@@ -19,10 +19,6 @@ const GetAverageTransactionAmountByCategory = async () => {
 
     return { data: JSON.parse(JSON.stringify(result)) };
   } catch (error) {
-    console.log(
-      "🚀 ~ GetAverageTransactionAmountByCategory ~ error:",
-      error.message
-    );
     return { error: error.message };
   }
 };
@@ -31,10 +27,9 @@ export default async function AverageTransactionAmountByCategory() {
   await new Promise((resolve) => {
     setTimeout(() => {
       resolve();
-    }, 5000);
+    }, 3000);
   });
   const { data, error } = await GetAverageTransactionAmountByCategory();
-  // console.log("🚀 ~ AverageTransactionAmountByCategory ~ error:", error.ReferenceError.message)
   if (!data) {
     return <p>{error}</p>;
   }

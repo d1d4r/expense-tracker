@@ -27,7 +27,7 @@ export default async function IncomeExpenseByMonth() {
   await new Promise((resolve) => {
     setTimeout(() => {
       resolve();
-    }, 7000);
+    }, 1000);
   });
   const { data, error } = await GetIncomeExpenseByMonth();
   
