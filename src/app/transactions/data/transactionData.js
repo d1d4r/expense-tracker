@@ -1,3 +1,4 @@
+import prisma from "@/lib/db/prisma";
 import { jsonSerialize } from "@/utils/helper";
 import { cache } from "react";
 
@@ -15,7 +16,6 @@ export const getTransactions = cache(async () => {
       skip: 0,
       take: 10,
     });
-    console.log("🚀 ~ getTransactions ~ data: called");
 
     return { transactions: jsonSerialize(data) };
   } catch (error) {
@@ -24,18 +24,3 @@ export const getTransactions = cache(async () => {
 });
 
 
-
-// export const getTransactions = async () => {
-//   try {
-//     const data = await prisma.transaction.findMany({
-//       orderBy: [{ createdAt: "desc" }],
-//       skip: 0,
-//       take: 10,
-//     });
-
-//     console.log("🚀 ~ getTransactions ~ data: called");
-//     return { transactions: jsonSerialize(data) };
-//   } catch (error) {
-//     return { error: error.message };
-//   }
-// };
