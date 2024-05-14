@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import React from "react";
 import dynamic from "next/dynamic";
+import prisma from "@/lib/db/prisma";
 
 const AverageTransactionAmountByCategoryChartD = dynamic(
   () => import("./AverageTransactionAmountByCategoryChart"),
