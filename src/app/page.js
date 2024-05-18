@@ -4,10 +4,11 @@ import TotalIncomeCard from "@/components/common/cardSummery/TotalIncomeCard";
 import TotalExpenseCard from "@/components/common/cardSummery/TotalExpenseCard";
 import NetIncomeCard from "@/components/common/cardSummery/NetIncomeCard";
 import RecentTransactionTabel from "./transactions/_component/tabel/RecentTransactionTabel";
-import CacheTabel from "./transactions/_component/tabel/CacheTabel";
 import RecentCategoryTabel from "./categories/_component/tabel/RecentCategoryTabel";
-
+// import { unstable_noStore as noStore } from 'next/cache';
+export const dynamic = 'force-dynamic'
 export default function Home() {
+  // noStore();
   return (
     <main className="container space-y-5 ">
       <div className="grid gap-4 mt-3 md:grid-cols-2 md:gap-8 lg:grid-cols-4">

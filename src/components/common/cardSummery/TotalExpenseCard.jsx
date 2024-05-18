@@ -1,5 +1,6 @@
 import React from "react";
 import CardSummery from "./CardSummery";
+import prisma from "@/lib/db/prisma";
 
 const getTolatExpense = async () => {
   try {

@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import React from "react";
 import dynamic from "next/dynamic";
 import prisma from "@/lib/db/prisma";
+import FilterChart from "../filter/FilterChart";
 
 const AverageTransactionAmountByCategoryChartD = dynamic(
   () => import("./AverageTransactionAmountByCategoryChart"),
@@ -36,8 +37,9 @@ export default async function AverageTransactionAmountByCategory() {
   }
   return (
     <Card className="rounded-none">
-      <CardHeader>
+      <CardHeader className="flex flex-row items-center justify-between">
         <CardTitle>Average Transaction Amount</CardTitle>
+        <FilterChart query="average-transaction-amount" />
       </CardHeader>
       <CardContent>
         <AverageTransactionAmountByCategoryChartD data={data} />

@@ -1,3 +1,4 @@
+import prisma from "@/lib/db/prisma";
 import { cache } from "react";
 
 export const getCategories = cache(async () => {

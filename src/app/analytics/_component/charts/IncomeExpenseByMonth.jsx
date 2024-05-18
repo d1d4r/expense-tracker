@@ -1,6 +1,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import React from "react";
 import dynamic from "next/dynamic";
+import prisma from "@/lib/db/prisma";
+import { Input } from "@/components/ui/input";
+import FilterChart from "../filter/FilterChart";
 
 const IncomeExpenseByMonthChartD = dynamic(
   () => import("./IncomeExpenseByMonthChart"),
@@ -30,7 +33,7 @@ export default async function IncomeExpenseByMonth() {
     }, 1000);
   });
   const { data, error } = await GetIncomeExpenseByMonth();
-  
+
   if (!data) {
     return <p>{error}</p>;
   }
@@ -38,8 +41,9 @@ export default async function IncomeExpenseByMonth() {
 
   return (
     <Card className="rounded-none">
-      <CardHeader>
+      <CardHeader className="flex flex-row items-center justify-between">
         <CardTitle>Top Spending/Earning Categories</CardTitle>
+        <FilterChart query="top-spending-earning" />
       </CardHeader>
       <CardContent>
         <IncomeExpenseByMonthChartD data={data} />

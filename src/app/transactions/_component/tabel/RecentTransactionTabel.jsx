@@ -14,7 +14,6 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import {
   getTransactions,
-  getTransactionsInclude,
 } from "../../data/transactionData";
 import { formatDate } from "@/utils/helper";
 

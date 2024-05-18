@@ -1,22 +1,10 @@
-import Link from "next/link";
 import React from "react";
-import { SheetContent, SheetTrigger, Sheet } from "./ui/sheet";
-import {
-  MenuIcon,
-  Package2Icon,
-  SearchIcon,
-  UserCircleIcon,
-} from "lucide-react";
-import { Button } from "./ui/button";
+import Link from "next/link";
 import { Input } from "./ui/input";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "./ui/dropdown-menu";
+import { Button } from "./ui/button";
+import Avatar from "@/app/account/_component/Avatar";
+import { SheetContent, SheetTrigger, Sheet } from "./ui/sheet";
+import { MenuIcon, Package2Icon, SearchIcon } from "lucide-react";
 
 export default function Header() {
   return (
@@ -105,22 +93,7 @@ export default function Header() {
             />
           </div>
         </form>
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button className="rounded-full" size="icon" variant="secondary">
-              <UserCircleIcon className="w-5 h-5" />
-              <span className="sr-only">Toggle user menu</span>
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="end">
-            <DropdownMenuLabel>My Account</DropdownMenuLabel>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem>Settings</DropdownMenuItem>
-            <DropdownMenuItem>Support</DropdownMenuItem>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem>Logout</DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
+        <Avatar />
       </div>
     </header>
   );

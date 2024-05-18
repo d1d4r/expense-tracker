@@ -8,8 +8,17 @@ import TotalIncomeCard from "@/components/common/cardSummery/TotalIncomeCard";
 import TotalExpenseCard from "@/components/common/cardSummery/TotalExpenseCard";
 import NetIncomeCard from "@/components/common/cardSummery/NetIncomeCard";
 import CardSekeleton from "@/components/common/cardSummery/CardSekeleton";
+import { redirect } from "next/navigation";
+import { auth } from "../../../auth";
 
-export default async function AnalyticsPage() {
+export default async function AnalyticsPage({ searchParams }) {
+  console.log("🚀 ~ AnalyticsPage ~ searchParams:", searchParams);
+
+  const session = await auth();
+
+  if (!session) {
+    redirect("/");
+  }
   return (
     <div className="grid w-full grid-cols-1 md:grid-cols-6">
       <div className="grid grid-cols-1 grid-rows-3 h-fit">
@@ -27,7 +36,9 @@ export default async function AnalyticsPage() {
       </div>
       <div className="grid grid-cols-1 col-span-5 grid-rows-1 md:grid-cols-2">
         <Suspense fallback={<SekeletonChart />}>
-          <IncomeExpenseOverTime />
+          <IncomeExpenseOverTime
+            params={searchParams["income-expense-overtime"]}
+          />
         </Suspense>
 
         <Suspense fallback={<SekeletonChart />}>

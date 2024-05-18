@@ -1,4 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import prisma from "@/lib/db/prisma";
 import { jsonSerialize } from "@/utils/helper";
 import dynamic from "next/dynamic";
 import React from "react";

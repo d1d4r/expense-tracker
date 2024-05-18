@@ -1,0 +1,106 @@
+"filename", "language", "JavaScript", "JavaScript JSX", "CSS", "XML", "JSON", "JSON with Comments", "Markdown", "SQL", "Prisma", "comment", "blank", "total"
+"d:\next-project\expense-tracker\.eslintrc.json", "JSON with Comments", 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 1, 4
+"d:\next-project\expense-tracker\README.md", "Markdown", 0, 0, 0, 0, 0, 0, 23, 0, 0, 0, 14, 37
+"d:\next-project\expense-tracker\auth.js", "JavaScript", 44, 0, 0, 0, 0, 0, 0, 0, 0, 12, 8, 64
+"d:\next-project\expense-tracker\components.json", "JSON", 0, 0, 0, 0, 17, 0, 0, 0, 0, 0, 0, 17
+"d:\next-project\expense-tracker\jsconfig.json", "JSON with Comments", 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 1, 8
+"d:\next-project\expense-tracker\next.config.mjs", "JavaScript", 2, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 5
+"d:\next-project\expense-tracker\package-lock.json", "JSON", 0, 0, 0, 0, 7305, 0, 0, 0, 0, 0, 1, 7306
+"d:\next-project\expense-tracker\package.json", "JSON", 0, 0, 0, 0, 54, 0, 0, 0, 0, 0, 1, 55
+"d:\next-project\expense-tracker\postcss.config.mjs", "JavaScript", 6, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 9
+"d:\next-project\expense-tracker\prisma\migrations\20240501200940_init\migration.sql", "SQL", 0, 0, 0, 0, 0, 0, 0, 26, 0, 5, 8, 39
+"d:\next-project\expense-tracker\prisma\schema.prisma", "Prisma", 0, 0, 0, 0, 0, 0, 0, 0, 40, 7, 14, 61
+"d:\next-project\expense-tracker\prisma\seed.js", "JavaScript", 65, 0, 0, 0, 0, 0, 0, 0, 0, 0, 17, 82
+"d:\next-project\expense-tracker\public\next.svg", "XML", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\next-project\expense-tracker\public\vercel.svg", "XML", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\next-project\expense-tracker\src\app\account\_component\Avatar.jsx", "JavaScript JSX", 0, 56, 0, 0, 0, 0, 0, 0, 0, 0, 3, 59
+"d:\next-project\expense-tracker\src\app\account\page.jsx", "JavaScript JSX", 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 2, 6
+"d:\next-project\expense-tracker\src\app\analytics\_component\charts\AverageTransactionAmountByCategory.jsx", "JavaScript JSX", 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 5, 50
+"d:\next-project\expense-tracker\src\app\analytics\_component\charts\AverageTransactionAmountByCategoryChart.jsx", "JavaScript JSX", 0, 31, 0, 0, 0, 0, 0, 0, 0, 0, 3, 34
+"d:\next-project\expense-tracker\src\app\analytics\_component\charts\CategoryIncomeExpense.jsx", "JavaScript JSX", 0, 63, 0, 0, 0, 0, 0, 0, 0, 0, 10, 73
+"d:\next-project\expense-tracker\src\app\analytics\_component\charts\CategoryIncomeExpenseChart.jsx", "JavaScript JSX", 0, 37, 0, 0, 0, 0, 0, 0, 0, 3, 4, 44
+"d:\next-project\expense-tracker\src\app\analytics\_component\charts\IncomeExpenseByMonth.jsx", "JavaScript JSX", 0, 47, 0, 0, 0, 0, 0, 0, 0, 1, 6, 54
+"d:\next-project\expense-tracker\src\app\analytics\_component\charts\IncomeExpenseByMonthChart.jsx", "JavaScript JSX", 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 4, 36
+"d:\next-project\expense-tracker\src\app\analytics\_component\charts\IncomeExpenseOverTime.jsx", "JavaScript JSX", 0, 52, 0, 0, 0, 0, 0, 0, 0, 5, 8, 65
+"d:\next-project\expense-tracker\src\app\analytics\_component\charts\IncomeExpenseOverTimeChart.jsx", "JavaScript JSX", 0, 34, 0, 0, 0, 0, 0, 0, 0, 0, 4, 38
+"d:\next-project\expense-tracker\src\app\analytics\_component\charts\SekeletonChart.jsx", "JavaScript JSX", 0, 16, 0, 0, 0, 0, 0, 0, 0, 0, 2, 18
+"d:\next-project\expense-tracker\src\app\analytics\_component\filter\FilterChart.jsx", "JavaScript JSX", 0, 37, 0, 0, 0, 0, 0, 0, 0, 0, 4, 41
+"d:\next-project\expense-tracker\src\app\analytics\page.jsx", "JavaScript JSX", 0, 50, 0, 0, 0, 0, 0, 0, 0, 9, 12, 71
+"d:\next-project\expense-tracker\src\app\api\auth\[...nextauth]\route.js", "JavaScript", 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 5
+"d:\next-project\expense-tracker\src\app\api\categories\route.jsx", "JavaScript JSX", 0, 21, 0, 0, 0, 0, 0, 0, 0, 0, 5, 26
+"d:\next-project\expense-tracker\src\app\api\login\route.js", "JavaScript", 29, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 34
+"d:\next-project\expense-tracker\src\app\api\transactions\route.js", "JavaScript", 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 4
+"d:\next-project\expense-tracker\src\app\categories\_action\action.js", "JavaScript", 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 41
+"d:\next-project\expense-tracker\src\app\categories\_component\ActionCategories.jsx", "JavaScript JSX", 0, 67, 0, 0, 0, 0, 0, 0, 0, 0, 3, 70
+"d:\next-project\expense-tracker\src\app\categories\_component\CategoriesTabel.jsx", "JavaScript JSX", 0, 16, 0, 0, 0, 0, 0, 0, 0, 0, 5, 21
+"d:\next-project\expense-tracker\src\app\categories\_component\CategoryForm.jsx", "JavaScript JSX", 0, 82, 0, 0, 0, 0, 0, 0, 0, 0, 8, 90
+"d:\next-project\expense-tracker\src\app\categories\_component\CategoryTypeRadio.jsx", "JavaScript JSX", 0, 47, 0, 0, 0, 0, 0, 0, 0, 0, 2, 49
+"d:\next-project\expense-tracker\src\app\categories\_component\CreateDialog.jsx", "JavaScript JSX", 0, 42, 0, 0, 0, 0, 0, 0, 0, 0, 2, 44
+"d:\next-project\expense-tracker\src\app\categories\_component\columns.jsx", "JavaScript JSX", 0, 37, 0, 0, 0, 0, 0, 0, 0, 0, 5, 42
+"d:\next-project\expense-tracker\src\app\categories\_component\tabel\RecentCategoryTabel.jsx", "JavaScript JSX", 0, 54, 0, 0, 0, 0, 0, 0, 0, 0, 4, 58
+"d:\next-project\expense-tracker\src\app\categories\create\page.jsx", "JavaScript JSX", 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 2, 7
+"d:\next-project\expense-tracker\src\app\categories\data\categoryData.js", "JavaScript", 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 15
+"d:\next-project\expense-tracker\src\app\categories\page.jsx", "JavaScript JSX", 0, 29, 0, 0, 0, 0, 0, 0, 0, 6, 4, 39
+"d:\next-project\expense-tracker\src\app\globals.css", "CSS", 0, 0, 60, 0, 0, 0, 0, 0, 0, 0, 24, 84
+"d:\next-project\expense-tracker\src\app\layout.js", "JavaScript", 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 39
+"d:\next-project\expense-tracker\src\app\page.js", "JavaScript", 29, 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 34
+"d:\next-project\expense-tracker\src\app\test-route\Form.jsx", "JavaScript JSX", 0, 53, 0, 0, 0, 0, 0, 0, 0, 7, 3, 63
+"d:\next-project\expense-tracker\src\app\test-route\SelectCategory.jsx", "JavaScript JSX", 0, 42, 0, 0, 0, 0, 0, 0, 0, 0, 5, 47
+"d:\next-project\expense-tracker\src\app\test-route\action.js", "JavaScript", 4, 0, 0, 0, 0, 0, 0, 0, 0, 5, 1, 10
+"d:\next-project\expense-tracker\src\app\test-route\page.jsx", "JavaScript JSX", 0, 23, 0, 0, 0, 0, 0, 0, 0, 47, 6, 76
+"d:\next-project\expense-tracker\src\app\transactions\_action\transactionAction.js", "JavaScript", 50, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 57
+"d:\next-project\expense-tracker\src\app\transactions\_component\DeleteTransaction.jsx", "JavaScript JSX", 0, 67, 0, 0, 0, 0, 0, 0, 0, 0, 4, 71
+"d:\next-project\expense-tracker\src\app\transactions\_component\Form\CategoryCombobox.jsx", "JavaScript JSX", 0, 109, 0, 0, 0, 0, 0, 0, 0, 0, 6, 115
+"d:\next-project\expense-tracker\src\app\transactions\_component\Form\Form.jsx", "JavaScript JSX", 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, 2, 9
+"d:\next-project\expense-tracker\src\app\transactions\_component\Form\TransactionAmount.jsx", "JavaScript JSX", 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 2, 35
+"d:\next-project\expense-tracker\src\app\transactions\_component\Form\TransactionDescription.jsx", "JavaScript JSX", 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 2, 34
+"d:\next-project\expense-tracker\src\app\transactions\_component\Form\TransactionForm.jsx", "JavaScript JSX", 0, 79, 0, 0, 0, 0, 0, 0, 0, 34, 13, 126
+"d:\next-project\expense-tracker\src\app\transactions\_component\Form\TransactionTypeRadio.jsx", "JavaScript JSX", 0, 57, 0, 0, 0, 0, 0, 0, 0, 0, 1, 58
+"d:\next-project\expense-tracker\src\app\transactions\_component\TransactionTabel.jsx", "JavaScript JSX", 0, 16, 0, 0, 0, 0, 0, 0, 0, 0, 6, 22
+"d:\next-project\expense-tracker\src\app\transactions\_component\columns.jsx", "JavaScript JSX", 0, 63, 0, 0, 0, 0, 0, 0, 0, 0, 7, 70
+"d:\next-project\expense-tracker\src\app\transactions\_component\tabel\CacheTabel.jsx", "JavaScript JSX", 0, 9, 0, 0, 0, 0, 0, 0, 0, 0, 3, 12
+"d:\next-project\expense-tracker\src\app\transactions\_component\tabel\RecentTransactionTabel.jsx", "JavaScript JSX", 0, 63, 0, 0, 0, 0, 0, 0, 0, 0, 3, 66
+"d:\next-project\expense-tracker\src\app\transactions\create\page.jsx", "JavaScript JSX", 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 2, 6
+"d:\next-project\expense-tracker\src\app\transactions\data\transactionData.js", "JavaScript", 22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 27
+"d:\next-project\expense-tracker\src\app\transactions\edit\[transactionId]\page.jsx", "JavaScript JSX", 0, 27, 0, 0, 0, 0, 0, 0, 0, 0, 6, 33
+"d:\next-project\expense-tracker\src\app\transactions\error.jsx", "JavaScript JSX", 0, 19, 0, 0, 0, 0, 0, 0, 0, 2, 4, 25
+"d:\next-project\expense-tracker\src\app\transactions\page.jsx", "JavaScript JSX", 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 3, 36
+"d:\next-project\expense-tracker\src\components\Tabel\dataTabel.jsx", "JavaScript JSX", 0, 97, 0, 0, 0, 0, 0, 0, 0, 0, 4, 101
+"d:\next-project\expense-tracker\src\components\common\SigninButton.jsx", "JavaScript JSX", 0, 22, 0, 0, 0, 0, 0, 0, 0, 10, 5, 37
+"d:\next-project\expense-tracker\src\components\common\SubmitButton.jsx", "JavaScript JSX", 0, 12, 0, 0, 0, 0, 0, 0, 0, 0, 1, 13
+"d:\next-project\expense-tracker\src\components\common\cardSummery\CardSekeleton.jsx", "JavaScript JSX", 0, 17, 0, 0, 0, 0, 0, 0, 0, 0, 2, 19
+"d:\next-project\expense-tracker\src\components\common\cardSummery\CardSummery.jsx", "JavaScript JSX", 0, 21, 0, 0, 0, 0, 0, 0, 0, 0, 2, 23
+"d:\next-project\expense-tracker\src\components\common\cardSummery\NetIncomeCard.jsx", "JavaScript JSX", 0, 27, 0, 0, 0, 0, 0, 0, 0, 0, 4, 31
+"d:\next-project\expense-tracker\src\components\common\cardSummery\TotalExpenseCard.jsx", "JavaScript JSX", 0, 27, 0, 0, 0, 0, 0, 0, 0, 0, 5, 32
+"d:\next-project\expense-tracker\src\components\common\cardSummery\TotalIncomeCard.jsx", "JavaScript JSX", 0, 27, 0, 0, 0, 0, 0, 0, 0, 0, 6, 33
+"d:\next-project\expense-tracker\src\components\header.jsx", "JavaScript JSX", 0, 99, 0, 0, 0, 0, 0, 0, 0, 0, 2, 101
+"d:\next-project\expense-tracker\src\components\ui\button.jsx", "JavaScript JSX", 0, 43, 0, 0, 0, 0, 0, 0, 0, 0, 5, 48
+"d:\next-project\expense-tracker\src\components\ui\calendar.jsx", "JavaScript JSX", 0, 59, 0, 0, 0, 0, 0, 0, 0, 0, 4, 63
+"d:\next-project\expense-tracker\src\components\ui\card.jsx", "JavaScript JSX", 0, 42, 0, 0, 0, 0, 0, 0, 0, 0, 9, 51
+"d:\next-project\expense-tracker\src\components\ui\command.jsx", "JavaScript JSX", 0, 101, 0, 0, 0, 0, 0, 0, 0, 0, 17, 118
+"d:\next-project\expense-tracker\src\components\ui\dialog.jsx", "JavaScript JSX", 0, 83, 0, 0, 0, 0, 0, 0, 0, 0, 14, 97
+"d:\next-project\expense-tracker\src\components\ui\dropdown-menu.jsx", "JavaScript JSX", 0, 139, 0, 0, 0, 0, 0, 0, 0, 0, 19, 158
+"d:\next-project\expense-tracker\src\components\ui\form.jsx", "JavaScript JSX", 0, 111, 0, 0, 0, 0, 0, 0, 0, 0, 23, 134
+"d:\next-project\expense-tracker\src\components\ui\input.jsx", "JavaScript JSX", 0, 16, 0, 0, 0, 0, 0, 0, 0, 0, 4, 20
+"d:\next-project\expense-tracker\src\components\ui\label.jsx", "JavaScript JSX", 0, 13, 0, 0, 0, 0, 0, 0, 0, 0, 6, 19
+"d:\next-project\expense-tracker\src\components\ui\popover.jsx", "JavaScript JSX", 0, 21, 0, 0, 0, 0, 0, 0, 0, 0, 7, 28
+"d:\next-project\expense-tracker\src\components\ui\radio-group.jsx", "JavaScript JSX", 0, 26, 0, 0, 0, 0, 0, 0, 0, 0, 6, 32
+"d:\next-project\expense-tracker\src\components\ui\select.jsx", "JavaScript JSX", 0, 108, 0, 0, 0, 0, 0, 0, 0, 0, 15, 123
+"d:\next-project\expense-tracker\src\components\ui\sheet.jsx", "JavaScript JSX", 0, 96, 0, 0, 0, 0, 0, 0, 0, 0, 14, 110
+"d:\next-project\expense-tracker\src\components\ui\skeleton.jsx", "JavaScript JSX", 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 3, 11
+"d:\next-project\expense-tracker\src\components\ui\table.jsx", "JavaScript JSX", 0, 73, 0, 0, 0, 0, 0, 0, 0, 0, 11, 84
+"d:\next-project\expense-tracker\src\components\ui\textarea.jsx", "JavaScript JSX", 0, 15, 0, 0, 0, 0, 0, 0, 0, 0, 4, 19
+"d:\next-project\expense-tracker\src\components\ui\toast.jsx", "JavaScript JSX", 0, 94, 0, 0, 0, 0, 0, 0, 0, 0, 11, 105
+"d:\next-project\expense-tracker\src\components\ui\toaster.jsx", "JavaScript JSX", 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 4, 36
+"d:\next-project\expense-tracker\src\components\ui\use-toast.js", "JavaScript", 128, 0, 0, 0, 0, 0, 0, 0, 0, 3, 25, 156
+"d:\next-project\expense-tracker\src\context\RadioProvider.jsx", "JavaScript JSX", 0, 18, 0, 0, 0, 0, 0, 0, 0, 0, 6, 24
+"d:\next-project\expense-tracker\src\lib\axios\categoriesApi.js", "JavaScript", 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 14
+"d:\next-project\expense-tracker\src\lib\db\prisma.js", "JavaScript", 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 15
+"d:\next-project\expense-tracker\src\lib\jwt.js", "JavaScript", 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 22
+"d:\next-project\expense-tracker\src\lib\utils.js", "JavaScript", 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 7
+"d:\next-project\expense-tracker\src\providers\provider.jsx", "JavaScript JSX", 0, 12, 0, 0, 0, 0, 0, 0, 0, 0, 3, 15
+"d:\next-project\expense-tracker\src\schema\TransactionSchema.js", "JavaScript", 8, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 11
+"d:\next-project\expense-tracker\src\schema\categorySchema.js", "JavaScript", 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 8
+"d:\next-project\expense-tracker\src\utils\helper.js", "JavaScript", 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 18
+"d:\next-project\expense-tracker\tailwind.config.js", "JavaScript", 84, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 87
+"Total", "-", 622, 3099, 60, 2, 7376, 10, 23, 26, 40, 162, 581, 12001
