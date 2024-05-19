@@ -2,7 +2,7 @@ import prisma from "@/lib/db/prisma";
 import { jsonSerialize } from "@/utils/helper";
 import { cache } from "react";
 
-export const getTransactions = cache(async () => {
+export const getTransactions = cache(async (page = 1) => {
   try {
     const data = await prisma.transaction.findMany({
       include: {
@@ -13,8 +13,8 @@ export const getTransactions = cache(async () => {
         },
       },
       orderBy: [{ createdAt: "desc" }],
-      skip: 0,
-      take: 20,
+      skip: (page - 1) * 10,
+      take: 10,
     });
 
     return { transactions: jsonSerialize(data) };
@@ -22,5 +22,3 @@ export const getTransactions = cache(async () => {
     return { error: error.message };
   }
 });
-
-
