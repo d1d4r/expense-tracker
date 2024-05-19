@@ -5,7 +5,13 @@ import Link from "next/link";
 import React, { Suspense } from "react";
 import TransactionTabel from "./_component/TransactionTabel";
 
-export default function TransactionsPage() {
+export default function TransactionsPage({ searchParams }) {
+  let { page } = searchParams;
+
+  if (!page) {
+    page = 1;
+  }
+  
   return (
     <div className="container py-10 mx-auto space-y-4">
       <p className="text-4xl text-primary">Transactions</p>
@@ -26,8 +32,8 @@ export default function TransactionsPage() {
           </Link>
         </Button>
       </div>
-      <Suspense  fallback={<p>Loading feed...</p>}>
-        <TransactionTabel />
+      <Suspense fallback={<p>Loading feed...</p>}>
+        <TransactionTabel page={page} />
       </Suspense>
     </div>
   );
