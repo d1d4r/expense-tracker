@@ -15,16 +15,18 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { Button } from "../ui/button";
+import Link from "next/link";
 
-export function DataTable({ columns, data }) {
+export function DataTable({ columns, data, page }) {
   const table = useReactTable({
     data,
     columns,
     getCoreRowModel: getCoreRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
   });
+
   console.log("rendered");
+
   return (
     <>
       <div className="border rounded-md">
@@ -77,23 +79,25 @@ export function DataTable({ columns, data }) {
           </TableBody>
         </Table>
       </div>
-      <div className="flex items-center justify-end space-x-2 py-4">
-        <Button
+      <div className="flex items-center justify-end py-4 space-x-2">
+        <Link
+          href={`transactions?page=${+page - 1}`}
           variant="outline"
           size="sm"
           onClick={() => table.previousPage()}
           disabled={!table.getCanPreviousPage()}
         >
           Previous
-        </Button>
-        <Button
+        </Link>
+        <Link
+          href={`transactions?page=${+page + 1}`}
           variant="outline"
           size="sm"
           onClick={() => table.nextPage()}
           disabled={!table.getCanNextPage()}
         >
           Next
-        </Button>
+        </Link>
       </div>
     </>
   );
