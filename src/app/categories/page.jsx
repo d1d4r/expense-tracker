@@ -1,9 +1,8 @@
 import React from "react";
-import CategoriesTabel from "./_component/CategoriesTabel";
-import { PlusCircle, SearchIcon } from "lucide-react";
+import { SearchIcon } from "lucide-react";
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import CategoriesTabel from "./_component/CategoriesTabel";
+
 import CreateDialog from "./_component/CreateDialog";
 import CategoryForm from "./_component/CategoryForm";
 
@@ -21,16 +20,9 @@ export default function CategoriesPage() {
           />
         </div>
 
-        <CreateDialog title='Create Category'>
+        <CreateDialog title="Create Category">
           <CategoryForm />
         </CreateDialog>
-
-        {/* <Button asChild href="transaction/create" className="space-x-2">
-          <Link href="categories/create">
-            <PlusCircle className="size-5" />
-            <span>Add Category</span>
-          </Link>
-        </Button> */}
       </div>
       <CategoriesTabel />
     </div>
