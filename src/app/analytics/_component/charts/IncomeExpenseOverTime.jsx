@@ -1,8 +1,7 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import React from "react";
 import dynamic from "next/dynamic";
 import prisma from "@/lib/db/prisma";
-import FilterChart from "../filter/FilterChart";
+import ChartCard from "./ChartCard";
 
 const IncomeExpenseOverTimeChartD = dynamic(
   () => import("./IncomeExpenseOverTimeChart"),
@@ -45,20 +44,8 @@ export default async function IncomeExpenseOverTime({ params }) {
   }
 
   return (
-    <Card className="rounded-none">
-      <CardHeader className="flex flex-row items-center justify-between">
-        <CardTitle>Income/Expense OverTime</CardTitle>
-        <FilterChart query="income-expense-overtime" />
-      </CardHeader>
-      <CardContent>
-        <IncomeExpenseOverTimeChartD data={data} />
-      </CardContent>
-    </Card>
+    <ChartCard title="Income/Expense OverTime">
+      <IncomeExpenseOverTimeChartD data={data} />
+    </ChartCard>
   );
 }
-
-// await new Promise((resolve) => {
-//   setTimeout(() => {
-//     resolve();
-//   }, 1000);
-// });
