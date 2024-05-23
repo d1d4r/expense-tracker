@@ -9,32 +9,47 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Button } from "@/components/ui/button";
+
+const years = [2020, 2021, 2022, 2023, 2024].reverse();
 
 export default function FilterChart({ query }) {
   const searchParams = useSearchParams();
   const pathname = usePathname();
-  const { replace } = useRouter();
+  const { replace, push } = useRouter();
 
   const onFilterHandler = (value) => {
-    console.log("🚀 ~ FilterChart ~ value:", value);
     const params = new URLSearchParams(searchParams);
     params.set(query, value);
-    replace(`${pathname}?${params.toString()}`);
+    push(`${pathname}?${params.toString()}`, { scroll: false });
   };
 
   return (
-    <Select onValueChange={onFilterHandler} defaultValue="2024">
-      <SelectTrigger className="w-[180px]">
-        <SelectValue placeholder="Select a year" />
-      </SelectTrigger>
-      <SelectContent>
-        <SelectGroup>
-          <SelectItem value="2024">2024</SelectItem>
-          <SelectItem value="2023">2023</SelectItem>
-          <SelectItem value="2022">2022</SelectItem>
-          <SelectItem value="2021">2021</SelectItem>
-        </SelectGroup>
-      </SelectContent>
-    </Select>
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button variant='outline'>select range</Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent>
+        {years.map((year) => {
+          return (
+            <DropdownMenuItem key={year} onClick={() => onFilterHandler(year)}>
+              {year}
+            </DropdownMenuItem>
+          );
+        })}
+        {/* <DropdownMenuItem>Profile</DropdownMenuItem>
+        <DropdownMenuItem>Billing</DropdownMenuItem>
+        <DropdownMenuItem>Team</DropdownMenuItem>
+        <DropdownMenuItem>Subscription</DropdownMenuItem> */}
+      </DropdownMenuContent>
+    </DropdownMenu>
   );
 }
