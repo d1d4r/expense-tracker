@@ -2,7 +2,6 @@
 import { transactionSchema } from "@/schema/TransactionSchema";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-
 import { Form } from "@/components/ui/form";
 import TransactionTypeRadio from "@/app/transactions/_component/Form/TransactionTypeRadio";
 import TransactionDescription from "@/app/transactions/_component/Form/TransactionDescription";
@@ -17,6 +16,7 @@ import { CategoryCombobox } from "@/app/transactions/_component/Form/CategoryCom
 import { useFormState } from "react-dom";
 import SubmitButton from "@/components/common/SubmitButton";
 import RadioProvider from "@/context/RadioProvider";
+import { redirect, useRouter } from "next/navigation";
 
 export default function TransactionForm({ transaction, transactionId }) {
   const form = useForm({
@@ -35,9 +35,9 @@ export default function TransactionForm({ transaction, transactionId }) {
     form.handleSubmit(processForm),
     null
   );
+  const router = useRouter()
 
   async function processForm(data) {
-    console.log("🚀 ~ processForm ~ data:", data);
     try {
       const result = transaction
         ? await editTransaction(transactionId, data)
@@ -58,6 +58,7 @@ export default function TransactionForm({ transaction, transactionId }) {
         title: `${action} transaction`,
         description: result.data,
       });
+      router.push("/transactions")
     } catch (error) {
       console.error("Error processing form:", error);
       toast({
@@ -65,6 +66,8 @@ export default function TransactionForm({ transaction, transactionId }) {
         title: "Uh oh! Something went wrong.",
         description: "Please try again later.",
       });
+    } finally {
+      form.reset();
     }
   }
 
