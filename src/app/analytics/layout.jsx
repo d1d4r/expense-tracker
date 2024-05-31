@@ -1,4 +1,5 @@
 import React from "react";
+import FilterChart from "./_component/filter/FilterChart";
 
 export default function LayoutAnalytics({
   children,
@@ -8,11 +9,11 @@ export default function LayoutAnalytics({
   Expense,
 }) {
   return (
-    <div className="grid grid-cols-1 col-span-5 grid-rows-1 md:grid-cols-2">
-      {Income}
+    <div >
+     {/*  {Income}
       {Average}
       {Category}
-      {Expense}
+      {Expense} */}
       {children}
     </div>
   );
