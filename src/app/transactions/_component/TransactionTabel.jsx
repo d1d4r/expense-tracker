@@ -5,9 +5,9 @@ import { getTransactions } from "../data/transactionData";
 import { RootTabel } from "./tabel/RootTabel";
 
 
-export default async function TransactionTabel({page}) {
+export default async function TransactionTabel({page,query}) {
 
-  const { transactions, error } = await getTransactions(page);
+  const { transactions, error } = await getTransactions(page,query);
 
   if (!transactions) {
     return <p>{error}</p>;
